@@ -1,0 +1,37 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #01024E;
+    color: #FF6464;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#navbar {
+	height: 60px;
+}
+
+.navbar-item {
+	float: right;
+	line-height: 60px;
+    opacity: 0.7;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.navbar-item:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#main-header {
+    margin-top: 200px;
+    background-image: '../img/forest ruins_cropped.png';
+}
+
+#main-header h1 {
+    font-size: 100px;
+    text-align: center;
+    user-select: none;
+}
