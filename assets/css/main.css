@@ -20,6 +20,23 @@ body {
     user-select: none;
 }
 
+a:link{
+    color:#FF6464;
+    text-decoration: none;
+  }
+  a:visited{
+    color:#FF6464;
+  }
+  a:hover{
+    color:#FF6464;
+  }
+  a:focus{
+    color:#FF6464;
+  }
+  a:active{
+    color:#FF6464;
+  }
+
 .navbar-item:hover {
     opacity: 1;
     cursor: pointer;
@@ -34,4 +51,22 @@ body {
     font-size: 100px;
     text-align: center;
     user-select: none;
+}
+
+#display {
+    margin-top: 200px;
+    display:flex;
+    justify-content: center;
+}
+
+.section {
+    flex: 30%;
+    padding: 15px;
+    max-width: 20%;
+    text-align: center;
+}
+
+.label {
+    font-size: 40px;
+    font-weight: bold;
 }
