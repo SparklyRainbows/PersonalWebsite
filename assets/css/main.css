@@ -13,11 +13,11 @@ body {
 .navbar-item {
 	float: right;
 	line-height: 60px;
-    opacity: 0.7;
-    margin-left: 20px;
-    font-size: 25px;
-    font-weight: bold;
-    user-select: none;
+  opacity: 0.7;
+  margin-left: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  user-select: none;
 }
 
 a:link{
@@ -66,6 +66,25 @@ a:link{
 }
 
 .label {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
+    user-select: none;
+    opacity: .8;
+}
+
+
+.label:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#bottom-bar {
+  margin-top: 80px;
+  text-align:center;
+}
+
+.bottom-icon {
+  display:inline-block;
+  padding:5px;
+  width: 40px;
 }
