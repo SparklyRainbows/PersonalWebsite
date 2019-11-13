@@ -42,7 +42,7 @@ body {
 footer {
     height: 60px;
     position: fixed;
-    bottom: 5px;
+    bottom: -70px;
     transition: bottom 0.2s ease-in-out;
     width: 100%;
     left: 30px;
@@ -52,6 +52,10 @@ footer {
     height: 80%;
 }
 
+#scrollup-icon:hover {
+    cursor: pointer;
+}
+
 .nav-up {
-    bottom: -70px;
+    bottom: -5px;
 }

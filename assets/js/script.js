@@ -39,12 +39,17 @@ function hasScrolled() {
     
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
+
+    if (st < 100) {
+        $('footer').removeClass('nav-up').addClass('nav-down');
+        return;
+    }
     
     if (st > lastScrollTop && st > navbarHeight){
-        $('footer').removeClass('nav-down').addClass('nav-up');
+        $('footer').removeClass('nav-up').addClass('nav-down');
     } else {
         if ((st + $(window).height() < $(document).height())) {
-            $('footer').removeClass('nav-up').addClass('nav-down');
+            $('footer').removeClass('nav-down').addClass('nav-up');
         }
     }
     
@@ -52,7 +57,7 @@ function hasScrolled() {
 }
 
 document.getElementById("scrollup-icon").onclick = function() {
-    scrollTo("main-header");
+    scrollTo("navbar");
 }
 
 //#endregion
