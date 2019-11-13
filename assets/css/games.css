@@ -1,0 +1,65 @@
+.gameicon {
+    width: 120px;
+}
+
+#quickdraw .gameicon {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.gametitle h2 {
+    display: inline-block;
+    transform: translateY(12px);
+    font-size: 50px;
+    font-style: italic;
+}
+
+.gametitle {
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.game {
+    margin: 150px 0px 50px 50px;
+}
+
+.summary-and-titlescreen {
+    display: flex;
+}
+
+.titlescreen {
+    max-width: 50%;
+    margin-right: 40px;
+}
+
+.summary {
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 50px 0px 50px;
+}
+
+.info {
+    font-size: 40px;
+    text-align: center;
+    margin: 120px;
+}
+
+.carousel-inner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(15%);
+}
+
+.download {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    opacity: .8;
+}
+
+.download:hover {
+    opacity: 1;
+}
