@@ -46,13 +46,6 @@
     margin: 120px;
 }
 
-.carousel-inner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateX(15%);
-}
-
 .download {
     font-size: 40px;
     text-align: center;
@@ -63,3 +56,51 @@
 .download:hover {
     opacity: 1;
 }
+
+#carousel,
+.carousel-image {
+  width: 1000px;
+  height: 600px;
+}
+
+#carousel {
+  position: relative;
+  border: 3px solid blue;
+  display: block;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+}
+
+#carousel-image-row {
+  display: flex;
+  left: 0px;
+  position: relative;
+  transition: 0.5s left;
+}
+
+.carousel-image img {
+  height: 100%;
+  width: auto;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  #button-next,
+  #button-previous {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
