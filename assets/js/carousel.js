@@ -1,75 +1,60 @@
-/* Width of each carousel image, in pixels */
 let carouselWidth = 1000; 
 
-/* Part 2.1: Get the elements */
-let prevButton = document.getElementById("button-previous");
-let nextButton = document.getElementById("button-next");
-let imageRow = document.getElementById("carousel-image-row");
+let prevButton = document.getElementsByClassName("button-previous");
+let nextButton = document.getElementsByClassName("button-next");
+let imageRow = document.getElementsByClassName("carousel-image-row");
 
-/* Part 2.2: Create variable to keep track of which image we're on */
-let imageNum = 0;
+var imageNums = Array(imageRow.length).fill(0);
 
+function showNextImage(index) {
+    index--;
+    imageNums[index]++;
+	let offset = -carouselWidth * imageNums[index];
+    imageRow[index].style.left = offset + "px";
 
-/* Part 2.3: The showNextImage function should shift the image row to the left */
-function showNextImage() {
-	// change imageNum
-	imageNum++;
-
-	// how many pixels from the left should imageRow now be?
-	let offset = -carouselWidth * imageNum;
-
-	// change css for imageRow
-	imageRow.style.left = offset + "px";
-
-	checkControls();
-
+	checkControls(index);
 }
 
-/* Part 2.4: Change the onclick property for the next button */
-nextButton.onclick = showNextImage;
+for (var i = 0; i < imageRow.length; i++) {
+    nextButton[i].onclick = function() {
+        showNextImage(i);
+    }
 
-
-/* Part 2.5: The showPrevImage function should shift the image row to the right */
-function showPrevImage() {
-	// change imageNum
-	imageNum--;
-
-	// how many pixels from the left should imageRow now be?
-	let offset = -carouselWidth * imageNum;
-
-	// change css for imageRow
-	imageRow.style.left = offset + "px";
-
-	checkControls();
+    prevButton[i].onclick = function() {
+        showPrevImage(i);
+    }
 }
 
-/* Part 2.6: Change the onclick property for the prev button */
-prevButton.onclick = showPrevImage;
+function showPrevImage(index) {
+    index--;
+    imageNums[index]--;
+	let offset = -carouselWidth * imageNums[index];
+    imageRow[index].style.left = offset + "px";
 
+	checkControls(index);
+}
 
-/* Total number of images */
-let totalImages = document.getElementsByClassName("carousel-image").length;
+let totalImages = Array(imageRow.length);
+for (var i = 0; i < imageRow.length; i++) {
+    totalImages[i] = imageRow[i].childElementCount - 1;
 
-/* Part 2.7 */
-function checkControls() {
-	// This if-statement checks if we're at the first image.
-	// In the parentheses below, check what imageNum is equal to.
-	if (imageNum == 0) {
-		// What should happen if it's the first image?
-		prevButton.classList.add("hidden");
+    if (!prevButton[i].classList.contains("hidden")) {
+        prevButton[i].classList.add("hidden");
+    }
+}
+
+function checkControls(index) {
+	if (imageNums[index] == 0) {
+		prevButton[index].classList.add("hidden");
 	}
-	else if (prevButton.classList.contains("hidden")) {
-		// otherwise, what should happen?
-		prevButton.classList.remove("hidden");
+	else if (prevButton[index].classList.contains("hidden")) {
+		prevButton[index].classList.remove("hidden");
+    }
+    
+	if (imageNums[index] >= totalImages[index]) {
+		nextButton[index].classList.add("hidden");
 	}
-	// This if-statement checks if we're at the last image.
-	// In the parentheses below, check what imageNum is equal to.
-	if (imageNum == 2) {
-		// What should happen it's the last image?
-		nextButton.classList.add("hidden");
-	}
-	else if (nextButton.classList.contains("hidden")) {
-		// otherwise, what should happen?
-		nextButton.classList.remove("hidden");
+	else if (nextButton[index].classList.contains("hidden")) {
+		nextButton[index].classList.remove("hidden");
 	}
 }
