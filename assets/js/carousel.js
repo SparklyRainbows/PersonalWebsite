@@ -17,10 +17,12 @@ function showNextImage(index) {
 
 for (var i = 0; i < imageRow.length; i++) {
     nextButton[i].onclick = function() {
+        console.log("next " + i);
         showNextImage(i);
     }
 
     prevButton[i].onclick = function() {
+        console.log("prev " + i);
         showPrevImage(i);
     }
 }
