@@ -1,10 +1,6 @@
 .gameicon {
     width: 120px;
-}
-
-#quickdraw .gameicon {
-    width: 100px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .gametitle h2 {
@@ -17,6 +13,7 @@
 .gametitle {
     margin-left: 30px;
     margin-bottom: 50px;
+    display: flex;
 }
 
 .game {

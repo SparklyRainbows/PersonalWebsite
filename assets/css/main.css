@@ -65,6 +65,14 @@ a:link{
     text-align: center;
 }
 
+.section-img {
+  transition: 1s;
+}
+
+.section-img:hover {
+  opacity: .6;
+}
+
 .label {
     font-size: 30px;
     font-weight: bold;
