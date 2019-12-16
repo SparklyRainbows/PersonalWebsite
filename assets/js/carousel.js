@@ -3,7 +3,8 @@ let carouselWidth = 1000;
 let games = [
     'quickdraw',
     'osborneodyssey',
-    'arcticadventures'
+    'arcticadventures',
+    'switch'
 ];
 
 let prevButtonSuffix = "-prev";
@@ -14,6 +15,7 @@ var imageNums = {
     'quickdraw': 0,
     'osborneodyssey': 0,
     'arcticadventures': 0,
+    'switch': 0
   };
 
 function showNextImage(game) {
@@ -36,6 +38,10 @@ document.getElementById(games[2] + nextButtonSuffix).onclick = function() {
     showNextImage(games[2]);
 }
 
+document.getElementById(games[3] + nextButtonSuffix).onclick = function() {
+    showNextImage(games[3]);
+}
+
 document.getElementById(games[0] + prevButtonSuffix).onclick = function() {
     showPrevImage(games[0]);
 }
@@ -46,6 +52,10 @@ document.getElementById(games[1] + prevButtonSuffix).onclick = function() {
 
 document.getElementById(games[2] + prevButtonSuffix).onclick = function() {
     showPrevImage(games[2]);
+}
+
+document.getElementById(games[3] + prevButtonSuffix).onclick = function() {
+    showPrevImage(games[3]);
 }
 
 function showPrevImage(game) {
