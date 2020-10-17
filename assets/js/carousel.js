@@ -5,7 +5,9 @@ let games = [
     'osborneodyssey',
     'arcticadventures',
     'switch',
-    'datingsim'
+    'datingsim',
+    'questionablecontent',
+    'robots'
 ];
 
 let prevButtonSuffix = "-prev";
@@ -17,7 +19,9 @@ var imageNums = {
     'osborneodyssey': 0,
     'arcticadventures': 0,
     'switch': 0,
-    'datingsim': 0
+    'datingsim': 0,
+    'questionablecontent': 0,
+    'robots' : 0
   };
 
 function showNextImage(game) {
@@ -48,6 +52,14 @@ document.getElementById(games[4] + nextButtonSuffix).onclick = function() {
     showNextImage(games[4]);
 }
 
+document.getElementById(games[5] + nextButtonSuffix).onclick = function () {
+    showNextImage(games[5]);
+}
+
+document.getElementById(games[6] + nextButtonSuffix).onclick = function () {
+    showNextImage(games[6]);
+}
+
 document.getElementById(games[0] + prevButtonSuffix).onclick = function() {
     showPrevImage(games[0]);
 }
@@ -66,6 +78,14 @@ document.getElementById(games[3] + prevButtonSuffix).onclick = function() {
 
 document.getElementById(games[4] + prevButtonSuffix).onclick = function() {
     showPrevImage(games[4]);
+}
+
+document.getElementById(games[5] + prevButtonSuffix).onclick = function () {
+    showPrevImage(games[5]);
+}
+
+document.getElementById(games[6] + prevButtonSuffix).onclick = function () {
+    showPrevImage(games[6]);
 }
 
 function showPrevImage(game) {

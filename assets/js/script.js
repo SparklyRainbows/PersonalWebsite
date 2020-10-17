@@ -8,12 +8,12 @@ document.getElementById("concepts-btn").onclick = function() {
     scrollTo("concepts");
 }
 
-document.getElementById("characters-btn").onclick = function() {
-    scrollTo("characters");
+document.getElementById("studies-btn").onclick = function() {
+    scrollTo("studies");
 }
 
-document.getElementById("traditional-btn").onclick = function() {
-    scrollTo("traditional");
+document.getElementById("paintings-btn").onclick = function() {
+    scrollTo("paintings");
 }
 //#endregion
 
